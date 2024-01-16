@@ -1,3 +1,4 @@
+import { Button, Grid, TextField } from "@mui/material"
 import { useReducer } from "react"
 
 export const ContactsForm = ({ addContacts }) => {
@@ -24,15 +25,30 @@ export const ContactsForm = ({ addContacts }) => {
                 dispatch({ type: "RESET" })
             }}
         >
-            <label>Name:</label>
-            <br />
-            <input name="userName" onChange={onChange} value={formState.userName} />
-            <br />
-            <label>Phone:</label>
-            <br />
-            <input name="phone" onChange={onChange} value={formState.phone} />
-            <br />
-            <input type="submit" value="Add" />
+            <Grid
+                container
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+
+            >
+                <TextField
+                    name="userName"
+                    label="Name"
+                    onChange={onChange}
+                    value={formState.userName}
+                    required
+                />
+                <TextField
+                    name="phone"
+                    label="Phone"
+                    margin="normal"
+                    onChange={onChange}
+                    value={formState.phone}
+                    required
+                />
+                <Button variant="contained" color="secondary" type="submit">Add</Button>
+            </Grid>
         </form>
     )
 }
