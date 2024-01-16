@@ -13,15 +13,7 @@ export const App = () => {
       { userName, phone }
     ]
 
-    newEntries.sort((a, b) => {
-      const userNameA = a.userName.toLowerCase()
-      const userNameB = b.userName.toLowerCase()
-
-      if(userNameA > userNameB) return 1
-      if(userNameA < userNameB) return -1
-      return 0
-
-    })
+    newEntries.sort((a, b) => a.userName.localeCompare(b.userName))
 
     setEntries(newEntries)
   }
