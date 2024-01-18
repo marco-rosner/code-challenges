@@ -6,9 +6,12 @@ function simpleArraySum(ar) {
     //     sum = sum + ar[i];
     // }
     
-    // return sum
+    // return sum // O(n)
 
-    return ar.reduce((acc, val) => acc + val); 
+    const length = ar.length
+    return length*(length+1)/2 // O(1)
+
+    // return ar.reduce((acc, val) => acc + val);  // O(n)
 }
 
 console.log(simpleArraySum([1,2,3]))
