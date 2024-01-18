@@ -1,10 +1,11 @@
+import { Button, Grid, Typography } from "@mui/material"
 import { createContext, useContext, useState } from "react"
 
 const countries = ["Brazil", "USA"]
 const CountryContext = createContext({
     countries,
     country: countries[0],
-    setCountry: () => {}
+    setCountry: () => { }
 })
 
 const FlagSection = () => {
@@ -12,7 +13,7 @@ const FlagSection = () => {
     const index = countries.indexOf(country)
 
     const changeCountry = () => {
-        if(index === countries.length-1) {
+        if (index === countries.length - 1) {
             setCountry(countries[0])
         } else {
             setCountry(countries[index + 1])
@@ -20,10 +21,16 @@ const FlagSection = () => {
     }
 
     return (
-        <div>
-            <p>Flag: {country}</p>
-            <button onClick={changeCountry}>Change flag</button>
-        </div>
+        <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ minHeight: '100vh' }}
+        >
+            <Typography variant="h6">Flag: {country}</Typography>
+            <Button onClick={changeCountry}>Change flag</Button>
+        </Grid>
     )
 }
 
