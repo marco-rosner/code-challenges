@@ -1,3 +1,4 @@
+import { Button, Grid } from "@mui/material";
 import React, { ReactNode, useState } from "react";
 
 export const App = (): ReactNode => {
@@ -8,8 +9,16 @@ export const App = (): ReactNode => {
     }
 
     return (
-        <button onClick={onClick}>
-            {toggle ? "ON" : 'OFF'}
-        </button>
+        <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ minHeight: '100vh' }}
+        >
+            <Button onClick={onClick}>
+                {toggle ? "ON" : 'OFF'}
+            </Button>
+        </Grid>
     )
 }
