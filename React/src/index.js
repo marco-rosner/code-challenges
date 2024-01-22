@@ -3,9 +3,9 @@ import { ThemeProvider } from '@mui/material/styles';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import { App } from './Contacts/App';
-import { theme } from './theme';
 // import { App } from './Context/App';
 import { App } from './Typescript/App';
+import { theme } from './theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
