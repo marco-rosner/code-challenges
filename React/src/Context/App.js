@@ -34,12 +34,18 @@ const FlagSection = () => {
     )
 }
 
-export const App = () => {
+const CountryProvider = ({ children }) => {
     const [country, setCountry] = useState(countries[0])
 
     return (
         <CountryContext.Provider value={{ countries, country, setCountry }}>
-            <FlagSection />
+            {children}
         </CountryContext.Provider>
     )
 }
+
+export const App = () => (
+    <CountryProvider>
+        <FlagSection />
+    </CountryProvider>
+)
