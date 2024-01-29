@@ -2,13 +2,14 @@ Relational Databases
 > PostegreSQL, MySQL, SQLite  
 > Tables as the primary data storage unit  
 > SQL is the querying language  
-> ACID properties  
+> ACID properties (Atomicity, Consistency, Isolation and Durability)
 
 NoSQL Databases
 > MongoDB, Cassandra, Redis  
 > Key-Value, Document, Wide-column or Graph-based format  
 > Adept at handling unstructured data  
 > Perfect for scalability, swift changes and straightforward queries  
+> BASE properties (Basic Availability, Soft-state, Eventual consistency)  
 
 In-Memory Databases
 > Redis, Memcached  
