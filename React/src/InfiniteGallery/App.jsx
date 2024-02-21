@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
+import { Alert, Grid, Slide, Snackbar, Typography } from "@mui/material"
 import { useImages } from "./useImages"
+import { Images } from "./Images"
 
 
 export const App = () => {
@@ -9,11 +11,11 @@ export const App = () => {
 
     const handleScroll = () => {
         if (
-            window.innerHeight + (document.documentElement.scrollTop + 1000) <
+            window.innerHeight + document.documentElement.scrollTop !==
             document.documentElement.offsetHeight ||
             loading
         )
-            return;
+            return
 
         setPage(page + 1)
     }
@@ -28,11 +30,26 @@ export const App = () => {
     }, [loading])
 
     return (
-        <>
-            <h1>Image Gallery</h1>
-            {images.map(image => (<img key={image.id} src={`https://picsum.photos/id/${image.id}/300/300`} alt={image.url} />))}
-            {loading && <>Loading...</>}
+        <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ minHeight: '100vh' }}
+        >
+            <Typography variant="h2" fontFamily="fantasy">Image Gallery</Typography>
+            <Images images={images} />
             {error && <>${error}</>}
-        </>
+            <Snackbar
+                open={loading}
+                autoHideDuration={3000}
+                onClose={() => setTimeout(() => loading, 3000)}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                TransitionComponent={Slide}
+                sx={{ bgcolor: 'Background.paper' }}
+            >
+                <Alert severity="info">Loading...</Alert>
+            </Snackbar>
+        </Grid>
     )
 }

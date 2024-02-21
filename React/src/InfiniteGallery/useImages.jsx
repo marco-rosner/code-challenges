@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 export const useImages = (page) => {
     const [data, setData] = useState([])
@@ -15,8 +15,8 @@ export const useImages = (page) => {
         .then(setData)
         .catch(setError)
         .finally(() => setLoading(false));
-        
-    }, [page])
 
+    }, [page])
+    console.log('loading ', loading)
     return { loading, data, error }
 }

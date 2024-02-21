@@ -12,11 +12,11 @@ import { theme } from './theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// root.render(
-//   <ThemeProvider theme={theme}>
-//     <CssBaseline />
-//     <App />
-//   </ThemeProvider>
-// )
+root.render(
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <App />
+  </ThemeProvider>
+)
 
-root.render(<App />)
+// root.render(<App />)
