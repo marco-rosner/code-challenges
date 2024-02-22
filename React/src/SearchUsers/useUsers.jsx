@@ -10,7 +10,10 @@ export const useUsers = () => {
 
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(result => result.json())
-            .then(setData)
+            .then((data) => {
+                const ascSorted = data.sort((a, b) => a.name.localeCompare(b.name))
+                setData(ascSorted)
+            })
             .catch(setError)
             .finally(() => setLoading(false))
     }, [])
