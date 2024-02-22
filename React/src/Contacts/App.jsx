@@ -9,7 +9,7 @@ export const App = () => {
   const [entries, setEntries] = useState(initialState);
 
   const addContacts = ({ userName, phone }) => {
-    const newEntries = [ ...entries, { userName, phone }]
+    const newEntries = [...entries, { userName, phone }]
 
     newEntries.sort((a, b) => a.userName.localeCompare(b.userName))
 
