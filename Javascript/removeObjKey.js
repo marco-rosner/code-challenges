@@ -12,4 +12,4 @@ const deleteKey = (key, obj) => {
     return obj
 }
 
-console.log(removeKey('key', {'key': 1, 'bar': 2}))
+console.log(deleteKey('key', {'key': 1, 'bar': 2}))
