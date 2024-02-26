@@ -1,8 +1,9 @@
 import React, { useReducer } from 'react'
+import { Grid } from '@mui/material'
 import { AddTask } from './AddTask'
 import { initialValue } from './initialValue'
 import { reducer } from './reducer'
-import { Task } from './Task'
+import { TaskList } from './TaskList'
 
 export const App = () => {
     const [tasks, dispatch] = useReducer(reducer, initialValue)
@@ -23,13 +24,15 @@ export const App = () => {
     })
 
     return (
-        <>
+        <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignContent="center"
+            sx={{ minHeight: '100vh', width: '100vw' }}
+        >
             <AddTask onAdd={onAdd} />
-            {tasks.map(task => (
-                <div key={task.id}>
-                    <Task task={task} onChange={onChange} onDelete={onDelete} />
-                </div>
-            ))}
-        </>
+            <TaskList tasks={tasks} onChange={onChange} onDelete={onDelete} />
+        </Grid>
     )
 }
