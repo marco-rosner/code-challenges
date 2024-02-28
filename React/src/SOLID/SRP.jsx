@@ -1,5 +1,5 @@
 // SRP - Single Responsability Principle
-// Single propose, Low coupling, and High cohesion
+// Single purpose, Low coupling, and High cohesion
 
 import { useEffect } from "react"
 
