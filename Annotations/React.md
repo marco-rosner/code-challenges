@@ -30,6 +30,14 @@ useContext (Context API)
 > const TestContext = createContext(initialValue)  
 > components: TestContext, TestProvider (a wrapper using TestContext.provider) and useTestContext (another wrapper for useContext(TestContext))  
 
+Create-react-app
+> React (Javascript library)
+> Webpack (Module bundler)
+> Babel (Javascript compiler)
+> ESLint (Statical anallyzer)
+> Jest (Test framework)
+> React Testing Library (Test library)
+
 Flux
 > State is mutable  
 > Multiple stores
@@ -62,6 +70,12 @@ HOC - High Order Component
 
 className over class
 > class is a keyword in JavaScript.
+
+Virtual DOM
+> Copy of real DOM to have less changes cost operation
+
+Shadow DOM
+> Subtrees of the real DOM eleements added in the document instead in the real DOM
 
 Error Boundaries
 > Use getDerivedStateFromError static function to show the fallback UI and componentDidCatch to send the log to log services.
