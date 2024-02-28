@@ -31,12 +31,12 @@ useContext (Context API)
 > components: TestContext, TestProvider (a wrapper using TestContext.provider) and useTestContext (another wrapper for useContext(TestContext))  
 
 Create-react-app
-> React (Javascript library)
-> Webpack (Module bundler)
-> Babel (Javascript compiler)
-> ESLint (Statical anallyzer)
-> Jest (Test framework)
-> React Testing Library (Test library)
+> React (Javascript library)  
+> Webpack (Module bundler)  
+> Babel (Javascript compiler)  
+> ESLint (Statical anallyzer)  
+> Jest (Test framework)  
+> React Testing Library (Test library)  
 
 Flux
 > State is mutable  
@@ -106,3 +106,9 @@ Hooks
 > useLocation - Returns the actual URL  
 > useNavigate - Same as Navigate component  
 > useHistory - Returns history object  
+
+React Query
+> Automatic caching and synchronization  
+> useQuery = `const { data, isLoading, isError } = useQuery('posts', fetchPosts)`  
+> useMutation = `const { mutate, isSuccess, isError } = useMutation(updateUser)`  
+> Built-in devtools  
