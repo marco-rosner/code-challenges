@@ -25,10 +25,27 @@ useReducer / React Redux
 > Changes are made in the reducer, a pure function (immutable)  
 > Dispatch actions that will handle by switch statemant in reducer function  
 
+``` 
+const [state, dispatch] = useReducer(reducer, initialValue)
+```
+
 useContext (Context API)
 > Avoid prop drilling  
-> const TestContext = createContext(initialValue)  
-> components: TestContext, TestProvider (a wrapper using TestContext.provider) and useTestContext (another wrapper for useContext(TestContext))  
+> components: TestContext, TestProvider (a wrapper using TestContext.provider) and useTestContext (another wrapper for useContext(TestContext))
+
+```
+const TestContext = createContext(initialValue)
+
+const TestProvider = ({ children }) => {
+const [state, dispatch] = useReducer(reducer, initialValue)
+
+return <TestContext.Provider values={ state, dispatch }>
+{children}
+</TestContext.Provider>
+}
+
+useTestContext = () => useContext(TestContext)
+```
 
 Create-react-app
 > React (Javascript library)  
