@@ -11,6 +11,7 @@ export const Video = () => {
             height={320}
         >
             <source src="rabbit320.mp4" type="video/mp4" />
+            <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish" />
             <p>No supported</p>
         </video>
     )
