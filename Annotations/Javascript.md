@@ -223,3 +223,7 @@ modify URL without reloading the page -> window.history.pushState or replaceStat
 Buffer class is similar to an array of integer but corresponds to a raw memory allocation outside the V8 heap. Javascript pure is not compatible with binary data
 
 Get image size -> On `onload` event, get width and height
+
+Links:
+- https://github.com/sudheerj/javascript-interview-questions#table-of-contents
+- https://www.simplilearn.com/tutorials/javascript-tutorial/javascript-interview-questions

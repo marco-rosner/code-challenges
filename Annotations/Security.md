@@ -60,3 +60,7 @@ CSRF - Cross-Site Request Forgery
 CORS - Cross-Origin Resource Sharing
 > Add adicional headers (`Origin`, `Access-Control-Allow-Origin` in response) to grand access to a diferent application domain
 > Browsers denied request to a diferent domain without CORS headers
+
+Links:
+- https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS
+- 

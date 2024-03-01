@@ -115,3 +115,14 @@ FontEnd System Design
 > Security - XSS (Sanitize HTML - DOMPurity, Content Security Policy Headers), CSRF, CORS, HTTPS
 
 > CI/CD - build, run tests (unit, integration and E2E), and deploy (bluegreen)
+
+Links:
+- https://levelup.gitconnected.com/system-design-interview-survival-guide-2023-preparation-strategies-and-practical-tips-ba9314e6b9e3
+- https://github.com/donnemartin/system-design-primer?tab=readme-ov-file#the-system-design-primer
+- https://igotanoffer.com/blogs/tech/system-design-interviews
+- https://www.geeksforgeeks.org/getting-started-with-system-design/?ref=ml_lbp
+- https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/
+- https://www.designgurus.io/blog/system-design-interview-basics-cap-vs-pacelc
+- https://www.infomach.com.br/o-que-e-elasticsearch-como-funciona-e-para-que-serve/
+- https://www.redhat.com/pt-br/topics/edge-computing/what-is-edge-computing
+- https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
