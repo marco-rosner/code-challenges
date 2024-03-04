@@ -1,5 +1,5 @@
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material"
-import { TableUserInfo } from "./TableUserInfo"
+import { UserPostCountCell } from "./UserPostCountCell"
 
 export const UserTable = ({ users }) => {
 
@@ -12,9 +12,12 @@ export const UserTable = ({ users }) => {
                 </TableRow>
             </TableHead>
             <TableBody>
-                {users.map((user) => (
-                    <TableUserInfo key={user.id} user={user} />
-                ))}
+                <TableRow>
+                    <TableCell>{user.name}</TableCell>
+                    {users.map((user) => (
+                        <UserPostCountCell key={user.id} user={user} />
+                    ))}
+                </TableRow>
             </TableBody>
         </Table>
     )
