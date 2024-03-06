@@ -87,6 +87,10 @@ Shadown DOM
 BOM - Browser Object Model
 > Broswer Object Model (history, location...)
 
+> window - browser env
+> global - node env
+> globalThis (ES11) == window == global - In any env
+
 Polyfill
 > JS code that provide modern functions to old browsers
 
@@ -102,12 +106,60 @@ ES6 new functionalities:
 > Spread operator  (`({ var1, var2, ...props})`)
 > Destruct  ( `const { var3, var4 } = props` )
 
+ES7
+> Exponentiation Operator ( 2 ** 3 // 8)
+
+ES8:
+> Async Functions (async ... await)
+
+ES9:
+> finally() block in the Promises
+
+ES10:
+> Array.flat(_[depth]_) - receives a depth attribute to flat the array
+> Array.flatMap((elem) => {}) - combination with map and flat
+
+ES11:
+> Optional operator
+> Promise.allSettled
+> BigInt
+> globalThis
+
+ES13 new functionalities:
+> await at Top Level instruction in modules
+> Error cause - `new Error("Connecting to database failed.", { cause: err })`
+> Array.findLast - find the last elenent found or undefined with the condition is not satisfied
+
 Promises
 
 > Async function that could be resolved (`.then((value) => { return value })`), not (`.catch((err) => { return err })`) and finalize (`.finally(() => {})`)  
 > States - pending -> fulfilled -> rejected  
 > Chaining - Call any times `.then()` and `.catch()` functions  
 > Promise all - Resolved async all promises and return an error or all results.  
+> Promise.allSettled (ES 11) - Resolve all promises to either fulfill or reject before resolving.
+> Promise.any - Returns the first promise resolved and return `AggregateError` with an array of rejection reasons
+
+```
+const promises = [
+  Promise.resolve('Resolved Promise 1'),
+  Promise.reject('Rejected Promise 2'),
+  Promise.resolve('Resolved Promise 3'),
+];
+
+Promise.allSettled(promises)
+  .then((results) => {
+    results.forEach((result) => {
+      if (result.status === 'fulfilled') {
+        console.log('Fulfilled:', result.value);
+      } else if (result.status === 'rejected') {
+        console.log('Rejected:', result.reason);
+      }
+    });
+  })
+  .catch((error) => {
+    console.error('Error in Promise.allSettled:', error);
+  });
+```
 
 Objects
 
