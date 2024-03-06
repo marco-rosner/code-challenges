@@ -83,7 +83,11 @@ Uncontrolled components
 > The dev can control the specifications of the component through props
 
 HOC - High Order Component
-> Takes a component and returns a new component with informations added to the component wrapped
+> Resuability - Allow reuse component logic across multiple components
+> Flexibility - Add additional arguments to customize component behavior
+> Separation of concerns - Encapsulating functionality in a separate component
+> Composition - Compose behaviors to create more complex functionality
+> Use for authentication, error handling, logging, performance tracking...
 
 className over class
 > class is a keyword in JavaScript.
