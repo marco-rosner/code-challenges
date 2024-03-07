@@ -65,9 +65,11 @@ API template
 ```
 Nome
 Method:
-URL: <domain>/v1/...
+URL: <api/internalapi>.<domain>/v1/...
 Body/Parameter/QueryString:
 ```
+> api/internal - public/private - CORS, Privacity, Sell data...
+> Filtering: ?filter=atribute.operation(value1;value2;...);price.gte(100),
 
 REST
 > GET, POST, PUT, PATCH, and DELETE  
@@ -79,9 +81,19 @@ GraphQL
 > Queries and Mutations  
 > For applications that needs to support various devices with differents data needs  
 
+WebSockets
+> Full-duplex, bidirectional, real-time comunication
+> Single and long-lived connection
+
 RPC - Remote Procedure Calls
+> Uses Protocol Buffers
 > Integrate system internaly  
 > Defined structures to comunicate  
+
+SOAP
+> Uses XML data
+> Stateful and stateless
+> Highly secure
 
 Webhooks
 > Used to receive data from server through events  
