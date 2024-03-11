@@ -3,6 +3,7 @@ Types
 > Numbers  
 > String  
 > Boolean  
+> Array  
 > Object  
 > null - represent "nothing", "empty"  
 > undefined - "value has not been assigned"  
@@ -125,7 +126,7 @@ ES11:
 > BigInt
 > globalThis
 
-ES13 new functionalities:
+ES13:
 > await at Top Level instruction in modules
 > Error cause - `new Error("Connecting to database failed.", { cause: err })`
 > Array.findLast - find the last elenent found or undefined with the condition is not satisfied
