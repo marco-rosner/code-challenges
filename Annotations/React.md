@@ -11,12 +11,18 @@ lifecycle deprecated in v16
 > componentWillReceiveProps  
 > componentWillUpdate  
 
+Hooks
+> Are features that allow the developer to access React state and lifecycle in functional components
+
 useEffect
 > componentDidMount, componentDidUpdate and componentWillUnmount  
 > Runs every render. Instead of thinking in terms of "mounting" and "updating", just "after render".  
 
 useMemo
 > Memorize a calculation to avoid unnecessary re-renders depending some dependencies
+
+useCallback
+> Memorize a function to avoid unnecessary re-renders to component childrens down the tree.
 
 useReducer / React Redux
 > Action -> Dispatcher -> Store -> View  
@@ -37,11 +43,13 @@ useContext (Context API)
 const TestContext = createContext(initialValue)
 
 const TestProvider = ({ children }) => {
-const [state, dispatch] = useReducer(reducer, initialValue)
+    const [state, dispatch] = useReducer(reducer, initialValue)
 
-return <TestContext.Provider values={ state, dispatch }>
-{children}
-</TestContext.Provider>
+    return (
+        <TestContext.Provider values={ state, dispatch }>
+            {children}
+        </TestContext.Provider>
+    )
 }
 
 useTestContext = () => useContext(TestContext)
@@ -64,6 +72,10 @@ Element vs Component
 
 Pure Component
 > Render the same output for the same state and props
+
+Closures
+> Enhancing React's functionality, particularly in managing state and handling events.
+> Any function that deals with state, props or events in a functional component
 
 Props
 > Read-only objects used as inputs for the components
@@ -99,7 +111,7 @@ Shadow DOM
 > Subtrees of the real DOM eleements added in the document instead in the real DOM
 
 Error Boundaries
-> Use getDerivedStateFromError static function to show the fallback UI and componentDidCatch to send the log to log services.
+> Use `getDerivedStateFromError` static function to show the fallback UI and `componentDidCatch` to send the log to log services.
 
 React-DOM package
 > render(), hydrate(), findDomNode and createPortal
@@ -133,3 +145,7 @@ React Query
 > useQuery = `const { data, isLoading, isError } = useQuery('posts', fetchPosts)`  
 > useMutation = `const { mutate, isSuccess, isError } = useMutation(updateUser)`  
 > Built-in devtools  
+
+React Window and React Virtualized
+> Window is a re-rewrite to make is smaller and faster than Virtualized
+> Both are used to improve performance of rendering long lists by only writing the visible portion of the list in the DOM
