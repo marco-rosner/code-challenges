@@ -18,6 +18,10 @@ useEffect
 > componentDidMount, componentDidUpdate and componentWillUnmount  
 > Runs every render. Instead of thinking in terms of "mounting" and "updating", just "after render".  
 
+useLayoutEffect
+> Runs after the DOM updates and before the Browser paint the page
+> Used to manipulate the DOM
+
 useMemo
 > Memorize a calculation to avoid unnecessary re-renders depending some dependencies
 
