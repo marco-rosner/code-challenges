@@ -1,3 +1,4 @@
+// Time: O(n^2) Space: O(1)
 const bubbleSort = (arr) => {
 
     for (let i = 0; i < arr.length; i++) {
