@@ -28,8 +28,9 @@ function largestPermutation(k, arr) {
         }
 
         if (index > i) {
-            originalArr[index1] = originalArr[i]
-            originalArr[i] = arr[i]
+            // originalArr[index] = originalArr[i]
+            // originalArr[i] = arr[i]
+            [originalArr[i], originalArr[index]] = [arr[i], originalArr[i]]
 
             changed++
             if (changed === k) break
