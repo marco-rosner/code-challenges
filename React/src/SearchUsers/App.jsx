@@ -1,5 +1,6 @@
 import { Box, Grid, Table, TableBody, TableCell, TableHead, TableRow, TableSortLabel, TextField } from "@mui/material"
 import { useEffect, useState } from "react"
+import { useDebounce } from "../CustomHooks/useDebounce"
 import { useUsers } from "./useUsers"
 
 export const App = () => {
@@ -7,6 +8,7 @@ export const App = () => {
     const [order, setOrder] = useState('asc')
     const [searchTerm, setSearchTerm] = useState('')
     const { data } = useUsers()
+    const searchTermDebounced = useDebounce(searchTerm)
 
     useEffect(() => {
         setUsers(data)
@@ -14,11 +16,11 @@ export const App = () => {
 
     useEffect(() => {
         const filteredUsers = users.filter(
-            user => user.name.toLowerCase().includes(searchTerm.toLowerCase())
+            user => user.name.toLowerCase().includes(searchTermDebounced.toLowerCase())
         )
 
-        setUsers(searchTerm === '' ? data : filteredUsers)
-    }, [searchTerm])
+        setUsers(searchTermDebounced === '' ? data : filteredUsers)
+    }, [searchTermDebounced])
 
     const onChange = (e) => {
         setSearchTerm(e.target.value)
