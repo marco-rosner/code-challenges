@@ -3,7 +3,6 @@ import { Alert, Grid, Slide, Snackbar, Typography } from "@mui/material"
 import { useImages } from "./useImages"
 import { Images } from "./Images"
 
-
 export const App = () => {
     const [page, setPage] = useState(1)
     const [images, setImages] = useState([])
@@ -17,7 +16,7 @@ export const App = () => {
         )
             return
 
-        setPage(page + 1)
+        setPage(() => page + 1)
     }
 
     useEffect(() => {

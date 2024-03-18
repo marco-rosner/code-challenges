@@ -9,8 +9,8 @@ export const Images = ({ images }) => (
         sx={{ minHeight: '80vh' }}
     >
         {images.map(image => (
-            <CardMedia sx={{ margin: "10px" }}>
-                <img key={image.id} src={`https://picsum.photos/id/${image.id}/300/300`} alt={image.url} />
+            <CardMedia key={image.id} sx={{ margin: "10px" }}>
+                <img src={`https://picsum.photos/id/${image.id}/300/300`} alt={image.url} />
             </CardMedia>))}
     </Grid>
 )

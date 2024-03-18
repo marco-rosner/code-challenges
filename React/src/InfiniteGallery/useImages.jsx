@@ -11,12 +11,12 @@ export const useImages = (page) => {
         fetch(
             `https://picsum.photos/v2/list?page=${page}&limit=100`
         )
-        .then(response => response.json())
-        .then(setData)
-        .catch(setError)
-        .finally(() => setLoading(false));
+            .then(response => response.json())
+            .then(setData)
+            .catch(setError)
+            .finally(() => setLoading(false));
 
     }, [page])
-    console.log('loading ', loading)
+
     return { loading, data, error }
 }
