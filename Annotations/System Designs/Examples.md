@@ -12,11 +12,11 @@ Url shortener
 
 File-sharing system
 > Devices (desktop, mobile...) > data storage (S3) > metadata database > queue message (kafka) > sync metadata with Clients  
-> Upload: File -> chuncks -> file metadata with chuncks index -> upload to data storage
-> Sync: Watch files/metadata -> upload chuncks and file metadata
-> Upload metadata: Send message to clients to sync changes through metadata
+> Upload: File -> chuncks -> file metadata with chuncks index -> upload to data storage  
+> Sync: Watch files/metadata -> upload chuncks and file metadata  
+> Upload metadata: Send message to clients to sync changes through metadata  
 
 Video Conference
-> Devices > Media Request Broker > Media Server (Video/Data stream) > Storage Server (Recording) > Analytics
-> Media Request Broker - Decides which Media Server will respond the request based in geo proximity
-> Media Server - Decides which quality stream will be forward to the client
+> Devices > Media Request Broker > Media Server (Video/Data stream) > Storage Server (Recording) > Analytics  
+> Media Request Broker - Decides which Media Server will respond the request based in geo proximity  
+> Media Server - Decides which quality stream will be forward to the client  

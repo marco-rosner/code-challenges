@@ -64,17 +64,17 @@ Distributed event streaming platform (Kafka, SQS)
 API template
 ```
 Nome
-Method:
+Method: POST/GET/PUT/PATCH/DELETE
 URL: <api/internalapi>.<domain>/v1/...
 Body/Parameter/QueryString:
 ```
-> api/internal - public/private - CORS, Privacity, Sell data...
-> Filtering: ?filter=atribute.operation(value1;value2;...);price.gte(100),
+> api/internal - public/private - CORS, Privacity, Sell data...  
+> Filtering: ?filter=atribute.operation(value1;value2;...);price.gte(100),  
 
 REST
 > GET, POST, PUT, PATCH, and DELETE  
 > Web standart  
-> Url pattern: <domain>/<version>/<resources>  
+> Url pattern: `<domain>/<version>/<resources>`  
 
 GraphQL
 > API Gateway orquestrating requests  
