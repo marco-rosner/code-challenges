@@ -28,7 +28,7 @@ function insert(key) {
     nodeAux.isEndOfWord = true
 }
 
-function search(key) {
+function search(key, verbose = false) {
     let level, index
     let nodeAux = root
 
@@ -36,6 +36,8 @@ function search(key) {
         index = key[level].charCodeAt(0) - 'a'.charCodeAt(0)
 
         if (nodeAux.children[index] === null) return false
+
+        if (verbose) console.log(String.fromCharCode('a'.charCodeAt(0) + index))
 
         nodeAux = nodeAux.children[index]
     }
@@ -51,7 +53,7 @@ for (let i = 0; i < keys.length; i++) {
     insert(keys[i])
 }
 
-console.log(search("the"))
+console.log(search("the", true))
 console.log(search("thee"))
 console.log(search("there"))
 console.log(search("ans"))
