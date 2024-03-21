@@ -28,6 +28,26 @@ function insert(key) {
     nodeAux.isEndOfWord = true
 }
 
+// not completed
+function show() {
+    let nodeAux = root
+    let nodeCur
+
+    for (let level = 0; level < ALPHABET_SIZE; level++) {
+        if (nodeAux.children[level] != null) {
+            nodeCur = nodeAux
+
+            for (let i = 0; i < ALPHABET_SIZE; i++) {
+                if (nodeCur.children[i] !== null) {
+                    console.log(String.fromCharCode('a'.charCodeAt(0) + i))
+                }
+            }
+
+            nodeAux = nodeAux.children[level]
+        }
+    }
+}
+
 function search(key, verbose = false) {
     let level, index
     let nodeAux = root
@@ -48,10 +68,19 @@ function search(key, verbose = false) {
 let keys = ["the", "a", "there", "answer", "any"]
 
 root = new TrieNode()
+const chars = new Set()
 
 for (let i = 0; i < keys.length; i++) {
+    for (let ind = 0; ind < keys[i].length; ind++) {
+        chars.add(keys[i][ind])
+    }
+
     insert(keys[i])
 }
+
+Array.from(chars).map(i => console.log(i))
+console.log('***')
+show() // missing 'r'
 
 console.log(search("the", true))
 console.log(search("thee"))
