@@ -56,6 +56,8 @@ XSS - Cross-Site Scripting
 CSRF - Cross-Site Request Forgery
 > Hijacking the user session to perform actions on user's behavior  
 > Dont store token in the user session. Use token in each request and store the token in input hidden tags
+> Set SameSite=Strict for cookies which means that the cookie only can be used by the same site that requested the cookie
+> Implementing CORS
 
 CORS - Cross-Origin Resource Sharing
 > Add adicional headers (`Origin`, `Access-Control-Allow-Origin` in response) to grand access to a diferent application domain
