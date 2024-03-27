@@ -55,7 +55,6 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Linear Search
 - LRU Cache
 - Max Heap
-- Node (Class)
 - Quick Sort
 - Trie
 

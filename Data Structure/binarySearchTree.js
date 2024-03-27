@@ -1,4 +1,10 @@
-var Node = require("./node")
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
 
 class BinarySearchTree {
     constructor() {
@@ -7,13 +13,13 @@ class BinarySearchTree {
 
     insert(data) {
         var newNode = new Node(data)
-        
+
         this.root === null ? this.root = newNode : this.insertNode(this.root, newNode)
     }
 
     insertNode(node, newNode) {
-        if(newNode.data < node.data) {
-            node.left === null ? node.left = newNode : this.insertNode(node.left, newNode) 
+        if (newNode.data < node.data) {
+            node.left === null ? node.left = newNode : this.insertNode(node.left, newNode)
         } else {
             node.right === null ? node.right = newNode : this.insertNode(node.right, newNode)
         }
@@ -24,30 +30,30 @@ class BinarySearchTree {
     }
 
     removeNode(node, data) {
-        if(node == null) return null
+        if (node == null) return null
 
-        if(data < node.data) {
+        if (data < node.data) {
             node.left = this.removeNode(node.left, data);
             return node;
         }
 
-        if(data > node.data) {
+        if (data > node.data) {
             node.right = this.removeNode(node.right, data);
             return node;
         }
 
         // reording
-        if(node.left === null && node.right === null){
+        if (node.left === null && node.right === null) {
             node = null
             return node
         }
 
-        if(node.left === null) {
+        if (node.left === null) {
             node = node.right
             return node
         }
 
-        if(node.right === null) {
+        if (node.right === null) {
             node = node.left
             return node
         }
@@ -61,7 +67,7 @@ class BinarySearchTree {
 
     // Transversal
     inOrder(node) {
-        if(node !== null) {
+        if (node !== null) {
             this.inOrder(node.left)
             console.log(node.data)
             this.inOrder(node.right)
@@ -69,7 +75,7 @@ class BinarySearchTree {
     }
 
     preOrder(node) {
-        if(node !== null) {
+        if (node !== null) {
             console.log(node.data)
             this.inOrder(node.left)
             this.inOrder(node.right)
@@ -77,7 +83,7 @@ class BinarySearchTree {
     }
 
     posOrder(node) {
-        if(node !== null) {
+        if (node !== null) {
             this.inOrder(node.left)
             this.inOrder(node.right)
             console.log(node.data)
@@ -86,7 +92,7 @@ class BinarySearchTree {
 
     // Helpers
     findMinNode(node) {
-        if(node.left == null) {
+        if (node.left == null) {
             return node
         } else {
             return this.findMinNode(node.left)
@@ -97,12 +103,12 @@ class BinarySearchTree {
         return this.root
     }
 
-    search(node, data){
-        if(node == null) return null
+    search(node, data) {
+        if (node == null) return null
 
-        if(data < node.data) return this.search(node.left, data)
+        if (data < node.data) return this.search(node.left, data)
 
-        if(data > node.data) return this.search(node.right, data)
+        if (data > node.data) return this.search(node.right, data)
 
         return node
     }
