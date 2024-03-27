@@ -48,10 +48,12 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Binary Search
 - Binary Search Tree
 - Bubble Sort
+- Double Linked List
 - Hashmap
 - Insertion Sort
 - Jump Search
 - Linear Search
+- LRU Cache
 - Max Heap
 - Node (Class)
 - Quick Sort
