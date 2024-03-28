@@ -18,6 +18,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 
 ### Array
 
+- Beautiful Pairs
 - Candles
 - Candles Functional
 - Compare Array
