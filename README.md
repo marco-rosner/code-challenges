@@ -66,6 +66,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Composite
 - Factory
 - Prototype
+- Proxy
 - Singleton
 
 ### Javascript
