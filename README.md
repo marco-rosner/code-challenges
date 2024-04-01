@@ -64,6 +64,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Abstract Factoy
 - Adapter
 - Bridge
+- Command
 - Composite
 - Factory
 - Prototype
