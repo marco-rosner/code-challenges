@@ -87,6 +87,9 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Sum Recursive
 - Sum Twice
 
+### NextJS Applications
+- Shopping Cart (Server Actions)
+
 ### React Applications
 
 - Audio Video
