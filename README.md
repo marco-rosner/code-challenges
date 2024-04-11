@@ -75,7 +75,8 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 
 ### Javascript
 
-- Calculator ES5
+- Calculator using Closure ES6
+- Calculator using Function ES5
 - Factorial Composition
 - IIFE
 - Pagination
