@@ -24,6 +24,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Compare Array
 - Compare Array Functional
 - Duplicate Numbers
+- Filling Jargs
 - Jim Orders
 - Largest Permutation
 - Lonely Integer
