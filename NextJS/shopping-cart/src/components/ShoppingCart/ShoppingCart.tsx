@@ -10,33 +10,31 @@ const INITIAL_CART = [
 ]
 
 export const ShoppingCart = () => {
-    const [applied, formAction] = useFormState(checkCode, { bool: false, msg: 'n/a' })
+    const [formState, formAction] = useFormState(checkCode, { codeStatus: false, msg: 'n/a' })
     const [cartItems, setCartItems] = useState(INITIAL_CART)
     const [modalOpen, setModalOpen] = useState(false)
 
-    const updateQuantity = (itemId: number, newQuantity: number) => {
+    const updateQuantity = (itemId: number, newQuantity: number) =>
         setCartItems((prevItems) =>
             prevItems.map((item) =>
                 item.id === itemId ? { ...item, quantity: newQuantity } : item
             ).filter((item) => item.quantity > 0))
-    }
 
-    const calculateTotal = () => {
-        return cartItems.reduce((total, item) => {
-            const addition = applied.bool
+    const calculateTotal = () =>
+        cartItems.reduce((total, item) => {
+            const addition = formState.codeStatus
                 ? (Math.floor(item.quantity / 2) + item.quantity % 2) * item.price
                 : item.price * item.quantity
 
             return total + addition
         }, 0)
-    }
 
     useEffect(() => {
-        if (applied.msg === 'n/a') return
+        if (formState.msg === 'n/a') return
 
         setModalOpen(true)
         setTimeout(() => setModalOpen(false), 1500)
-    }, [applied])
+    }, [formState])
 
     return (
         <div className="flex flex-col space-y-3">
@@ -53,7 +51,7 @@ export const ShoppingCart = () => {
             ))}
             <p>Total: ${calculateTotal()}</p>
             <div className="pt-10">
-                {applied.bool
+                {formState.codeStatus
                     ? (<p>Promo applied</p>)
                     : (
                         <form action={formAction}>
@@ -64,7 +62,7 @@ export const ShoppingCart = () => {
             </div>
             {modalOpen && (
                 <div className="absolute flex justify-center items-center z-1 w-64 rounded outline outline-3 bg-blue-300 self-center text-center">
-                    <p>{applied.msg}</p>
+                    <p>{formState.msg}</p>
                 </div>
             )}
         </div>

@@ -7,11 +7,11 @@ export const checkCode = async (prevState: any, formData: FormData) => {
 
     const CODE = 'BOGOCODE'
 
-    const applied = rawFormData.promoCode === CODE
+    const codeStatus = rawFormData.promoCode === CODE
 
-    const msg = applied
+    const msg = codeStatus
         ? 'Your promocode was successfully applied.'
         : 'The entered code is incorrect.'
 
-    return ({ bool: applied, msg })
+    return ({ codeStatus, msg })
 }
