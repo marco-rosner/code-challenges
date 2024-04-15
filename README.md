@@ -31,6 +31,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Mash
 - Maximum Toys
 - Max Min
+- Max Sub Array
 - Min Max Sum
 - Not in Sequence
 - Plus Minus
@@ -131,6 +132,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Separate Numbers
 - Sort Random Word
 - Sort Strings
+- Supress Repetitive Letter
 - The Love Letter Mystery
 - Time Convertion
 - Two Strings
