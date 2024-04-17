@@ -91,6 +91,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 
 ### NextJS Applications
 - Shopping Cart (Server Actions)
+- Code Reader Highlight
 
 ### React Applications
 
