@@ -8,25 +8,23 @@ export const App = () => {
     const [images, setImages] = useState([])
     const { data, loading, error } = useImages(page)
 
-    const handleScroll = () => {
-        if (
-            window.innerHeight + document.documentElement.scrollTop !==
-            document.documentElement.offsetHeight ||
-            loading
-        )
-            return
-
-        setPage(() => page + 1)
-    }
-
     useEffect(() => {
-        setImages([...images, ...data])
+        setImages((images) => [...images, ...data])
     }, [data])
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [loading])
+        const options = {
+            root: null,
+            rootMargin: "1000px",
+            threshold: 0.0
+        }
+
+        const observer = new IntersectionObserver(
+            () => setPage((page) => page + 1),
+            options
+        )
+        observer.observe(document.querySelector(`#footer`))
+    }, [])
 
     return (
         <Grid
@@ -38,6 +36,7 @@ export const App = () => {
         >
             <Typography variant="h2" fontFamily="fantasy">Image Gallery</Typography>
             <Images images={images} />
+            <hr id="footer" />
             {error && <>${error}</>}
             <Snackbar
                 open={loading}
@@ -52,3 +51,20 @@ export const App = () => {
         </Grid>
     )
 }
+
+// AddEventListener using scroll event and dealing with height manually
+//
+// const handleScroll = () => {
+//     if (
+//         window.innerHeight + document.documentElement.scrollTop !==
+//         document.documentElement.offsetHeight ||
+//         loading
+//     )
+//         return
+//     setPage((page) => page + 1)
+// }
+
+// useEffect(() => {
+//     window.addEventListener("scroll", handleScroll)
+//     return () => window.removeEventListener("scroll", handleScroll)
+// }, [loading])
