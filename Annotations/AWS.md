@@ -1,7 +1,7 @@
 S3 (Simple Storage Service)
 - Free tier -> 12 months, 5GB storage, 20000 GET and 2000 PUT
 - Cost -> Per storage -> 50 TB/month -> 0,023 USD per GB
-- How works -> Store data in buckets. Control access, replicate data to any region.
+- How works -> Store data in buckets. Control access, and replicate data to any region.
 
 RDS (Relational Database Service)
 - Free tier -> 12 months, 750 hours/month, 20GB SSD storage, 20GB backups
@@ -15,13 +15,13 @@ EC2 (Elastic Compute Cloud)
 
 SNS (Simple Notification Service)
 - Free tier -> 1 mi publications, 100.000 HTTP/S deliveries and 1000 emails
-- Cost -> Request for type of topic (standart or FIFO) and message size
+- Cost -> Request for type of topic (standard or FIFO) and message size
 - How works -> Message system service for fast push, flexible and managed
 
 SQS (Simple Queue Service)
 - Free tier -> Free, 1 mi requests
-- Cost -> Per type of queue (standart or FIFO) -> 0,40 USD 1 mi to 100 bi request/month
-- How works -> Queue scalable to store maessages
+- Cost -> Per type of queue (standard or FIFO) -> 0,40 USD 1 mi to 100 bi request/month
+- How works -> Queue scalable to store messages
 
 SES (Simple Email Service)
 - Free tier -> 12 months, 3000 messages per month
