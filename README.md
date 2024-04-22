@@ -106,6 +106,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - High Order Components (HOC)
 - Infinite Gallery
 - Pagination
+- QuizApp
 - Search Users
 - SOLID
 - ToDo
