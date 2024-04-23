@@ -36,10 +36,12 @@ export const App = () => {
             <Grid
                 sx={{ border: '1px solid #E0E0E0', borderRadius: '15px', padding: '20px' }}>
                 {score.length !== questions.length ?
-                    (<>
-                        <Question questions={questions} setScore={setScore} />
-                        <div id="feedback" style={style.feedback}>{score[score.length - 1]}</div>
-                    </>) :
+                    (
+                        <>
+                            <Question questions={questions} setScore={setScore} />
+                            <div id="feedback" style={style.feedback}>{score[score.length - 1]}</div>
+                        </>
+                    ) :
                     (<Result score={score} questionTotal={questions.length} />)
                 }
             </Grid>

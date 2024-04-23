@@ -1,12 +1,10 @@
 import { useState } from "react";
+import { Option } from "./Option";
 
 const style = {
     question: {
         fontWeight: 'bold',
         marginBottom: '10px',
-    },
-    options: {
-        marginBottom: '5px',
     },
     button: {
         marginTop: '10px',
@@ -52,14 +50,8 @@ export const Question = ({ questions, setScore }) => {
         <>
             <div id="question" style={style.question}>{question.question}</div>
             {question.options.map((opt, i) => (
-                <div key={i}>
-                    <div style={style.options} >
-                        <input type="radio" id={`option${i}`} name="option" value={opt} onChange={() => setAnswer(opt)} />
-                        <label for={`option${i}`}>{opt}</label>
-                    </div>
-                </div>
-            ))
-            }
+                <Option key={i} opt={opt} i={i} setAnswer={setAnswer} />
+            ))}
             <button style={style.button} id="submitBtn" onClick={onClick}>
                 Submit
             </button>
