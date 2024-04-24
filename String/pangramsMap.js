@@ -7,13 +7,13 @@
 
 function pangrams(s) {
     // Write your code here
-    let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+    const alphabetMap = new Map('abcdefghijklmnopqrstuvwxyz'.split('').map(char => [char, char])) // HashMap
     const str = s.toLowerCase()
 
     for (let i = 0; i < str.length; i++) {
-        alphabet = alphabet.filter((val) => val != str[i])
+        alphabetMap.delete(str[i]) // O(1)
 
-        if (alphabet.length == 0) return 'pangram'
+        if (alphabetMap.size === 0) return 'pangram'
     }
 
     return 'not pangram'

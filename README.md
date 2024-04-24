@@ -132,6 +132,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Organize Contacts
 - Palindrome Index
 - Pangrams
+- Pangrams using Map
 - Printer
 - Reduce String
 - Separate Numbers
