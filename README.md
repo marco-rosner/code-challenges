@@ -143,6 +143,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - The Love Letter Mystery
 - Time Convertion
 - Two Strings
+- Two Strings using HashMap
 - Validate Phone Format
 - Weighted Unifor Strings
 
