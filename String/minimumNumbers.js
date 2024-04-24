@@ -14,8 +14,8 @@ function minimumNumber(n, password) {
     const upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     const special_characters = "!@#$%^&*()-+"
     let isValid = [false, false, false, false]
-    
-    for(let i=0; i<password.length; i++) {
+
+    for (let i = 0; i < password.length; i++) {
         !isValid[0] && (isValid[0] = numbers.includes(password[i]))
         !isValid[1] && (isValid[1] = lower_case.includes(password[i]))
         !isValid[2] && (isValid[2] = upper_case.includes(password[i]))
@@ -23,14 +23,14 @@ function minimumNumber(n, password) {
     }
 
     let missingChar = 0
-    for(let ind=0; ind<isValid.length;ind++){
+    for (let ind = 0; ind < isValid.length; ind++) {
         isValid[ind] === false && missingChar++
     }
 
     return Math.max(missingChar, 6 - n)
 }
 
-console.log(minimumNumber(3, 'Ab1'))
-console.log(minimumNumber(11, '#HackerRank'))
-console.log(minimumNumber(2, '#)'))
-console.log(minimumNumber(1, '#'))
+console.log(minimumNumber(3, 'Ab1')) // 3
+console.log(minimumNumber(11, '#HackerRank')) // 1
+console.log(minimumNumber(2, '#)')) // 4
+console.log(minimumNumber(1, '#')) // 5
