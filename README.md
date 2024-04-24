@@ -82,6 +82,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Calculator using Function ES5
 - Factorial Composition
 - IIFE
+- Measuring Time Computing
 - Pagination
 - Pagination Pointer
 - Promise Reject
