@@ -14,9 +14,10 @@ function twoStrings(s1, s2) {
     //         if(s1[i].charCodeAt(0) === s2[ind].charCodeAt(0)) return 'YES'
     //     }
     // }
+
     let length = s1.length
-    for(let i=0; i<length; i++) {
-        if(s2.includes(s1[i])) return 'YES'
+    for (let i = 0; i < length; i++) {
+        if (s2.includes(s1[i])) return 'YES'
     }
 
     return 'NO'
