@@ -11,7 +11,7 @@ function minimumNumber(n, password) {
     // Return the minimum number of characters to make the password strong
     const numbers = "0123456789"
     const lower_case = "abcdefghijklmnopqrstuvwxyz"
-    const upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    const upper_case = lower_case.toUpperCase()
     const special_characters = "!@#$%^&*()-+"
     let isValid = [false, false, false, false]
 
