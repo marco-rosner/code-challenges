@@ -2,18 +2,20 @@
 //
 // Output:
 //
-// twoStrings - using Map: 1.739990234375 ms
-// twoStrings - using Map: 1.761ms
-// Performance Total 1:  0.0056190043687820435
-// Performance Total 2:  0.0024610012769699097
-// Performance Total Map:  0.01657100021839142
+// YES
+// Measuring Time Computing: 1.7548828125 ms
+// Measuring Time Computing: 1.795ms
+// Performance Total two arrays:  0.0038989782333374023
+// Performance Total includes:  0.0028370022773742676
+// Performance Total Set:  0.009216010570526123
+// NO
 //
 function twoStrings(s1, s2) {
     // Solution 1
     const start1 = performance.now()
     for (let i = 0; i < s1.length; i++) {
         for (let ind = 0; ind < s2.length; ind++) {
-            if (s1[i].charCodeAt(0) === s2[ind].charCodeAt(0)) return 'YES'
+            if (s1[i] === s2[ind]) return 'YES'
         }
     }
     const end1 = performance.now()
@@ -26,23 +28,22 @@ function twoStrings(s1, s2) {
     }
     const end2 = performance.now()
 
-    // Solution using HashMap
+    // Solution using Set
     const startMap = performance.now()
-    const s2Map = new Map(s2.split('').map(char => [char, char]))
-
+    const s2Map = new Set([...s2])
     for (let i = 0; i < s1.length; i++) {
-        if (s2Map.get(s1[i])) return 'YES'
+        if (s2Map.has(s1[i])) return 'YES'
     }
     const endMap = performance.now()
 
-    console.log('Performance Total 1: ', end1 - start1)
-    console.log('Performance Total 2: ', end2 - start2)
-    console.log('Performance Total Map: ', endMap - startMap)
+    console.log('Performance Total two arrays: ', end1 - start1)
+    console.log('Performance Total includes: ', end2 - start2)
+    console.log('Performance Total Set: ', endMap - startMap)
 
     return 'NO'
 }
 
-console.time('twoStrings - using Map') // disabling console.logs
+console.time('Measuring Time Computing') // disabling console.logs
 console.log(twoStrings('hello', 'world'))
-console.timeEnd('twoStrings - using Map') // disabling console.logs
+console.timeEnd('Measuring Time Computing') // disabling console.logs
 console.log(twoStrings('hi', 'world')) // Measuring each solution using performance.now()
