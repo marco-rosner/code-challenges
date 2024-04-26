@@ -26,6 +26,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Duplicate Numbers
 - Filling Jargs
 - Gas Station
+- Hurdle Race
 - Jim Orders
 - Largest Permutation
 - Lonely Integer
@@ -128,6 +129,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Funny String
 - Gem Stones
 - HackerHank String
+- Is Fibo
 - Mars Exploration
 - Minimum Numbers
 - Minimum Numbers using HashMap
