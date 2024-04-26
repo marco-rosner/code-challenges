@@ -21,6 +21,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Beautiful Pairs
 - Candles
 - Candles Functional
+- Circular Array Rotation
 - Climbing Leaderboard
 - Compare Array
 - Compare Array Functional
