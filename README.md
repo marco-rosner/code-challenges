@@ -89,6 +89,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Pagination
 - Pagination Pointer
 - Promise Reject
+- Read File using Node:fs
 - Remove Object Key
 - Sum Array Recursive
 - Sum Recursive
