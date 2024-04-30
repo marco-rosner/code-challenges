@@ -39,6 +39,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Min Max Sum
 - Not in Sequence
 - Plus Minus
+- Plus Minus Functional
 - Random Sort
 - Sort
 - Sort Functional
