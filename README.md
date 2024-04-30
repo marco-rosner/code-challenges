@@ -41,6 +41,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Plus Minus
 - Plus Minus Functional
 - Random Sort
+- Set Value
 - Sort
 - Sort Functional
 - Staircase
