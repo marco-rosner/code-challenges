@@ -86,6 +86,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 
 - Calculator using Closure ES6
 - Calculator using Function ES5
+- Chocolate Feast - Logical Challenge
 - Factorial Composition
 - IIFE
 - Measuring Time Computing
