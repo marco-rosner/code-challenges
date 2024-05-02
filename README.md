@@ -76,6 +76,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Command
 - Composite
 - Factory
+- Iterator
 - Observer
 - Prototype
 - Proxy
