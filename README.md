@@ -42,6 +42,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Plus Minus Functional
 - Random Sort
 - Set Value
+- Smallest Positive
 - Sort
 - Sort Functional
 - Staircase
