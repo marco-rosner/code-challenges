@@ -104,6 +104,9 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Shopping Cart (Server Actions)
 - Code Reader Highlight
 
+### Python Code Challenges
+- Cleaning Robot
+
 ### React Applications
 
 - Audio Video
