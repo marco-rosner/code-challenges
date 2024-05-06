@@ -53,11 +53,8 @@ def solution(R):
         if path[i][j] == '.':
             cleaned+=1
             cleanPath.append(str(i) + str(j))
-            print(cleanPath)
 
         if path[i][j] == 'X':
-            print('change ', path[i][j])
-            print(i, j)
             direction, i, j = changeDirection(direction, i, j)
 
         if i == ylen:
@@ -79,10 +76,6 @@ def solution(R):
             direction = WEST
 
         i, j = move(direction, i, j)
-
-        print(i, j)
-        print(path[i][j])
-        print(direction)
 
     return cleaned
 
