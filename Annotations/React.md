@@ -11,6 +11,14 @@ lifecycle deprecated in v16
 > componentWillReceiveProps  
 > componentWillUpdate  
 
+React 19
+> const [isPending, startTransition] = useTransition  
+> const [optimisticState, addOptimistic] = useOptimistic(state, (currentState, optimisticValue) => {...})  
+> useFormState now is useActionState
+> const { pending, data, method, action } = useFormStatus
+> use hook: use(promise) or use(ApiContext)
+> Context.Provider could be use only as Context
+
 Hooks
 > Are features that allow the developer to access React state and lifecycle in functional components
 
