@@ -244,6 +244,9 @@ let (ES6) -> block scope
 div -> block component  
 span -> inline element
 
+display: none -> removes the element from the layout entirely
+visibility: hidden -> preserves the element space in the layout
+
 functions -> context (this), args argument and ES5  
 arrow functions -> Annonymous function and ES6
 
