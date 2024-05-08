@@ -1,6 +1,6 @@
 ## Code Challenges and preparation to interviews
 
-This repository is a collection of resources and code challenges (mostly from HackerHank and Medium articles) in Javascript and ReactJS that I solved and created in my journey to return to the tech industry after my sabbatical. I started doing this privately then I realized that it could help other people to prepare themselves for their journey too so I decided to give publicity to all this content.
+This repository is a collection of resources and code challenges (mostly from HackerHank and Medium articles) in Javascript, ReactJS and NextJS that I created and solved in my journey to return to the tech industry after my sabbatical. I started doing this privately then I realized that it could help other people to prepare themselves for their journey too so I decided to give publicity to all this content.
 
 Feel free to use, learn, comment, criticize, or do whatever you want with all the content here.
 
