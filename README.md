@@ -101,6 +101,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Sum Twice
 
 ### NextJS Applications
+- App Routing Pattenrs
 - Shopping Cart (Server Actions)
 - Code Reader Highlight
 
