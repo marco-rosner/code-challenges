@@ -13,6 +13,7 @@ export default function Home() {
         <Link href="nested">Nested layout Account Page</Link>
         <Link href="nested/password">Nested layout Password Page</Link>
         <Link href="parallel">Parallel Routes</Link>
+        <Link href="photos">Photos - Modal</Link>
       </>
     </WrapperContent>
   );
