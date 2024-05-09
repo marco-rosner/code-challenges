@@ -12,6 +12,7 @@ export default function Home() {
         <Link href="optional-catch-all/path/name">Opotional Catch ALL with pathname</Link>
         <Link href="nested">Nested layout Account Page</Link>
         <Link href="nested/password">Nested layout Password Page</Link>
+        <Link href="parallel">Parallel Routes</Link>
       </>
     </WrapperContent>
   );
