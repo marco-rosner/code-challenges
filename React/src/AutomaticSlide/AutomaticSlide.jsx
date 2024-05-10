@@ -8,8 +8,6 @@ export const AutomaticSlide = () => {
     const { data: images, loading } = useImages()
     const [src, setSrc] = useState('')
 
-    if (loading) return <span>Loading...</span>
-
     return (
         <Grid
             container
@@ -18,8 +16,15 @@ export const AutomaticSlide = () => {
             justifyContent="center"
             sx={{ minHeight: '100vh' }}
         >
-            <Image src={src} />
-            <Slide images={images.slice(0, 5)} setSrc={setSrc} />
+            {loading ? (
+                <span>Loading...</span>
+            ) : (
+                <>
+                    <Image src={src} />
+                    <Slide images={images.slice(0, 5)} setSrc={setSrc} />
+                </>
+            )}
+
         </Grid>
     )
 }

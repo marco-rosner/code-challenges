@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 export const useImages = () => {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(false)
+    const [error, setError] = useState(null)
 
     useEffect(() => {
         setLoading(true)

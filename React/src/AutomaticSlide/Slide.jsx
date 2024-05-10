@@ -6,17 +6,11 @@ export const Slide = ({ images, setSrc }) => {
     const [indexActive, setIndexActive] = useState(0)
 
     const onBack = () => {
-        setIndexActive(prev => {
-            if (prev === 0) return prev = length
-            return prev -= 1
-        })
+        setIndexActive(prev => prev === 0 ? length : prev -= 1)
     }
 
     const onNext = () => {
-        setIndexActive(prev => {
-            if (prev === length) return prev = 0
-            return prev += 1
-        })
+        setIndexActive(prev => prev === length ? 0 : prev += 1)
     }
 
     useEffect(() => setSrc(images[indexActive]?.url), [indexActive])
