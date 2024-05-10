@@ -111,6 +111,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 ### React Applications
 
 - Audio Video
+- Automatic Slide
 - Captcha Router
 - Code Challenge
 - Contexts
