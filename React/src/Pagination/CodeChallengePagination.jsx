@@ -5,6 +5,7 @@ const PER_PAGE = 10
 const INITIAL_PAGE = 0
 
 export default function Table() {
+    const abortController = new AbortController()
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
     const [users, setUsers] = useState([])
@@ -13,14 +14,19 @@ export default function Table() {
 
     const fetchUsers = async (page) => {
         setLoading(true)
-        await fetch(`${USERS_URL}?page=${page}`)
+        await fetch(`${USERS_URL}?page=${page}`, { signal: abortController.signal })
             .then((data) => data.json())
             .then((data) => {
                 setLastPage(Math.round(data.count / PER_PAGE))
                 setUsers(data)
             })
             .catch((err) => {
-                console.error(err)
+                if (err.name === "AbortError") {
+                    console.error('Abort Error Due Race Condition')
+                } else {
+                    console.error(err)
+                }
+
                 setError(!!err)
             }).finally(() => {
                 setLoading(false)
@@ -29,6 +35,8 @@ export default function Table() {
 
     useEffect(() => {
         fetchUsers(page)
+
+        return () => abortController.abort()
     }, [page])
 
     if (error) return <>Something went wrong</>
