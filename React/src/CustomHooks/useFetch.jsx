@@ -1,21 +1,31 @@
 import { useEffect } from "react"
 
 export const useFetch = (url) => {
+    const abortController = AbortController()
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
     const [data, setData] = useState(null)
 
     useEffect(() => {
         setLoading(true)
-        fetch(url)
+
+        const fetchFunction = async (url) => await fetch(url, { signal: abortController.signal })
             .then((data) => data.json())
             .then(setData)
             .catch((err) => {
-                console.error(err)
+                if (err.name === 'AbortError') {
+                    console.error('Aborted due Race Condition')
+                } else {
+                    console.error(err)
+                }
 
                 setError(err)
             })
             .finally(() => setLoading(false))
+
+        fetchFunction(url)
+
+        return () => abortController.abort()
     }, [url])
 
     return { data, loading, error }
