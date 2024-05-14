@@ -1,4 +1,5 @@
 import React from 'react'
+import Table from './CodeChallengePagination'
 import { Pagination } from './Pagination'
 import { PaginationPointer } from './PaginationPointer'
 
@@ -14,7 +15,8 @@ export const App = () => {
     return (
         <div>
             {/* <Pagination data={initialData}/> */}
-            <PaginationPointer data={initialData} />
+            {/* <PaginationPointer data={initialData} /> */}
+            <Table />
         </div>
     )
 }

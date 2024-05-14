@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const USERS_URL = 'https://example.com/api/users';
+const USERS_URL = 'https://jsonplaceholder.typicode.com/users';
 const PER_PAGE = 10
 const INITIAL_PAGE = 0
 
@@ -11,34 +11,29 @@ export default function Table() {
     const [page, setPage] = useState(INITIAL_PAGE)
     const [lastPage, setLastPage] = useState(0)
 
-    const fetchUsers = (page) => {
+    const fetchUsers = async (page) => {
         setLoading(true)
-        fetch(`${USERS_URL}?page=${page}`)
-            .then((data) => {
-                setLoading(false)
-                return data.json()
-            })
+        await fetch(`${USERS_URL}?page=${page}`)
+            .then((data) => data.json())
             .then((data) => {
                 setLastPage(Math.round(data.count / PER_PAGE))
-                setUsers(data.results)
+                setUsers(data)
             })
             .catch((err) => {
-                console.log(err)
+                console.error(err)
                 setError(!!err)
+            }).finally(() => {
+                setLoading(false)
             })
     }
 
     useEffect(() => {
         fetchUsers(page)
-    }, [])
-
-    useEffect(() => {
-        if (!loading) {
-            fetchUsers(page)
-        }
     }, [page])
 
     if (error) return <>Something went wrong</>
+
+    if (loading) return <>Loading...</>
 
     return (
         <div>
@@ -54,8 +49,8 @@ export default function Table() {
                     {users.map((user) => (
                         <tr key={user.id}>
                             <td>{user.id}</td>
-                            <td>{user.firstName}</td>
-                            <td>{user.lastName}</td>
+                            <td>{user.name}</td>
+                            <td>{user.username}</td>
                         </tr>
                     ))}
                 </tbody>
