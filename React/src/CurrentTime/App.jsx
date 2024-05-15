@@ -5,13 +5,13 @@ export const App = () => {
     const [currentTime, setCurrentTime] = useState()
 
     useEffect(() => {
-        setInterval(() => {
+        const interval = setInterval(() => {
             const today = new Date()
 
             setCurrentTime((prev) => `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`)
-
-            return () => clearInterval(today)
         }, 1000)
+
+        return () => clearInterval(interval)
     }, [])
 
     return (
