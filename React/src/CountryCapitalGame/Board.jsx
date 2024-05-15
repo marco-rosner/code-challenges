@@ -36,8 +36,8 @@ export const CountryCapitalGame = ({ data }) => {
             {
                 randomData.length === 0 ?
                     (<span>Congratulations</span>) :
-                    randomData.map((item, i) => (
-                        <Button i={i} item={item} isWrong={isWrong} isSelected={isSelected} onClick={onClick} />
+                    randomData.map(item => (
+                        <Button item={item} isWrong={isWrong} isSelected={isSelected} onClick={onClick} />
                     ))
             }
         </>

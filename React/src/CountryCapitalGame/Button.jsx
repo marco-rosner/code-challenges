@@ -10,11 +10,11 @@ const styles = {
     }
 }
 
-export const Button = ({ item, i, isSelected, isWrong, onClick }) => {
+export const Button = ({ item, isSelected, isWrong, onClick }) => {
 
     return (
         <button
-            key={i}
+            key={item}
             style={isSelected(item) ?
                 isWrong ?
                     { ...styles.margin, ...styles.backgroundWrong } :
