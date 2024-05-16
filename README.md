@@ -122,6 +122,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Feature Flag
 - High Order Components (HOC)
 - Infinite Gallery
+- Lifecycle
 - Pagination
 - QuizApp
 - Search Users

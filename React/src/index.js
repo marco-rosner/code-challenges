@@ -2,6 +2,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { App } from './Lifecycle/App';
 // import { App } from './AutomaticSlide/App';
 // import { App } from './CountryCapitalGame/App';
 // import { App } from './QuizApp/App';
@@ -19,7 +20,7 @@ import ReactDOM from 'react-dom/client';
 // import { App } from './Typescript/App';
 // import { App } from './ToDo/App';
 import { theme } from './theme';
-import { App } from './DogImage/App';
+// import { App } from './DogImage/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
