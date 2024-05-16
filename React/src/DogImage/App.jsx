@@ -10,18 +10,19 @@ export const App = () => {
         .catch(err => console.error(err))
     // .finally(() => setIsLoading(false))
 
-    useEffect(() => {
+    const handleFetchFlow = () => {
         setIsLoading(true)
         setData('')
 
         fetchFn()
+    }
+
+    useEffect(() => {
+        handleFetchFlow()
     }, [])
 
     const onClick = () => {
-        setIsLoading(true)
-        setData('')
-
-        fetchFn()
+        handleFetchFlow()
     }
 
     return (
