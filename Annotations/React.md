@@ -1,10 +1,15 @@
 lifecycle after React v16
-> getDerivedStateFromProps  
+Functional component  
 > componentDidMount  
-> shouldComponentUpdate  
-> getSnapshotBeforeUpdate  
 > componentDidUpdate  
 > componentWillUnmount  
+
+Class component  
+> static getDerivedStateFromProps - equivalent to call the set function from useState in function component  
+> static getDerivedStateFromError  
+> componentDidCatch  
+> getSnapshotBeforeUpdate  
+> shouldComponentUpdate  
 
 lifecycle deprecated in v16
 > componentWillMount  
