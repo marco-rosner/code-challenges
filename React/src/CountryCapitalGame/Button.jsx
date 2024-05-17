@@ -10,18 +10,15 @@ const styles = {
     }
 }
 
-export const Button = ({ item, isSelected, isWrong, onClick }) => {
-
-    return (
-        <button
-            key={item}
-            style={isSelected(item) ?
-                isWrong ?
-                    { ...styles.margin, ...styles.backgroundWrong } :
-                    { ...styles.margin, ...styles.backgroundSelected } :
-                styles.margin}
-            onClick={() => onClick(item)}>
-            {item}
-        </button>
-    )
-}
+export const Button = ({ item, isSelected, isWrong, onClick }) => (
+    <button
+        key={item}
+        style={isSelected(item) ?
+            isWrong ?
+                { ...styles.margin, ...styles.backgroundWrong } :
+                { ...styles.margin, ...styles.backgroundSelected } :
+            styles.margin}
+        onClick={() => onClick(item)}>
+        {item}
+    </button>
+)
