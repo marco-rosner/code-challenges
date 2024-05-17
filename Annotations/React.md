@@ -25,7 +25,7 @@ React 19
 > Context.Provider could be use only as Context
 
 Hooks
-> Are features that allow the developer to access React state and lifecycle in functional components
+> Features that allow the developer to access React state and lifecycle in functional components
 
 useEffect
 > componentDidMount, componentDidUpdate and componentWillUnmount  
