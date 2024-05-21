@@ -112,7 +112,7 @@ Uncontrolled components
 > The dev can control the specifications of the component through props
 
 HOC - High Order Component
-> Resuability - Allow reuse component logic across multiple components
+> Reusuability - Allow reuse component logic across multiple components
 > Flexibility - Add additional arguments to customize component behavior
 > Separation of concerns - Encapsulating functionality in a separate component
 > Composition - Compose behaviors to create more complex functionality

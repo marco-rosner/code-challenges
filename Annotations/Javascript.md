@@ -280,7 +280,7 @@ null -> Declared and initialized but with the absence of value (null)
 SessionStorage -> up to 5MB, deleted when tab closed, accessed in the same browser  
 LocalStorage -> up to 10MB, is not deleted, accessed any tab in the browser  
 
-Make sync HTTP request -> xmlHttpReq.open("GET", url, true) // false for asynch
+Make sync HTTP request -> xmlHttpReq.open("GET", url, true) // false for async
 
 Compare two date objects -> date1.getTime() === date3.getTime()
 
