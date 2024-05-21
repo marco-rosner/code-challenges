@@ -12,6 +12,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - AWS (Services, descriptions and free tears)
 - Database
 - Javascript
+- Node
 - React
 - SOLID
 - Tests
