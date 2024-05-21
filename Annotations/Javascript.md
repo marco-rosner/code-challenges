@@ -131,6 +131,18 @@ ES13:
 > Error cause - `new Error("Connecting to database failed.", { cause: err })`
 > Array.findLast - find the last elenent found or undefined with the condition is not satisfied
 
+ES14:
+> Array.toSorted() -> Similar to sort() but return a new array  
+> Array.toReversed() -> Similar to reverse() but return a new array  
+> Array.with() -> Replace a specific value -> `arr.with(index, value)`  
+> Array.findLastIndex -> Return the index of last element
+> Array.toSpliced -> Similar to splice but return a new array
+
+ES15:
+> Pipeline Operator - Using |> to get the result of line above and execute the instruction after the pipeline operator  
+> Immutable records and tuples -> `const user = #{ friends: #["marco", "rosner"] }`  
+> Temporal API - is a modern and comprehensive date-time API -> `Temporal.Now.instant().toString()`  
+
 Promises
 
 > Async function that could be resolved (`.then((value) => { return value })`), not (`.catch((err) => { return err })`) and finalize (`.finally(() => {})`)  
