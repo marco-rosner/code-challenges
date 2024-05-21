@@ -1,3 +1,7 @@
+Deployment process on AWS
+
+AWS CodePepeline > CloudFront > EC2, Lambda > RDS, S3...
+
 S3 (Simple Storage Service)
 - Free tier -> 12 months, 5GB storage, 20000 GET and 2000 PUT
 - Cost -> Per storage -> 50 TB/month -> 0,023 USD per GB
