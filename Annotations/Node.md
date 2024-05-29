@@ -9,7 +9,7 @@ Pros:
 - Streamming huge amounts of data and I/O intensive operations
 
 Cons:
-- Not suitable for heavy computational tasks
+- Not suitable for heavy computational tasks (use worker threads to it)
 - Using callback is complex and possible to end up with several nested callbacks
 - Dealing with relational database is not a good option for NodeJS
 
