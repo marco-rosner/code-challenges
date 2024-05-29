@@ -1,0 +1,195 @@
+Statistical profiling result from isolate-0x63f6d40-1864431-v8.log, (479 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    294   61.4%          /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+     18    3.8%          /usr/lib/x86_64-linux-gnu/libc.so.6
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+
+ [C++]:
+   ticks  total  nonlib   name
+    128   26.7%   76.6%  epoll_pwait@@GLIBC_2.6
+     17    3.5%   10.2%  __write@@GLIBC_2.2.5
+     13    2.7%    7.8%  fwrite@@GLIBC_2.2.5
+      3    0.6%    1.8%  _IO_file_xsputn@@GLIBC_2.2.5
+      2    0.4%    1.2%  std::ostream::put(char)@@GLIBCXX_3.4
+      2    0.4%    1.2%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      1    0.2%    0.6%  cfree@GLIBC_2.2.5
+      1    0.2%    0.6%  __pthread_mutex_unlock@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+      0    0.0%    0.0%  JavaScript
+    167   34.9%  100.0%  C++
+      1    0.2%    0.6%  GC
+    312   65.1%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     11   44.0%    2.3%  fwrite@@GLIBC_2.2.5
+     10   40.0%    2.1%  __write@@GLIBC_2.2.5
+      2    8.0%    0.4%  _IO_file_xsputn@@GLIBC_2.2.5
+      1    4.0%    0.2%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      1    4.0%    0.2%  cfree@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    294   61.4%  /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+    278   94.6%    /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+    210   75.5%      LazyCompile: ~inspectorWaitForDebugger node:inspector:192:34
+    210  100.0%        LazyCompile: ~<anonymous> /usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:91065
+    210  100.0%          LazyCompile: ~<anonymous> /usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:90356
+    210  100.0%            LazyCompile: ~7207 /usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:89296
+     18    6.5%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+     13   72.2%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      3   23.1%          Function: ~<anonymous> node:tls:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      2   15.4%          Function: ~<anonymous> node:https:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1    7.7%          LazyCompile: ~lazyWebCrypto node:crypto:125:23
+      1  100.0%            LazyCompile: ~get node:crypto:369:8
+      1    7.7%          LazyCompile: ~lazyLoadStreams node:fs:2935:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:3080:17
+      1    7.7%          Function: ~<anonymous> node:worker_threads:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1    7.7%          Function: ~<anonymous> node:tty:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1    7.7%          Function: ~<anonymous> node:internal/child_process:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1    7.7%          Function: ~<anonymous> node:child_process:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1    7.7%          Function: ~<anonymous> node:_http_server:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1    7.7%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      5   27.8%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:264:25
+      3   60.0%          LazyCompile: ~loadBuiltinModule node:internal/modules/cjs/helpers:51:27
+      3  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:888:24
+      2   40.0%          Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:51:27
+      2  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:888:24
+     13    4.7%      Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      3   23.1%        Function: ~<anonymous> node:internal/fs/promises:1:1
+      3  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      3  100.0%            Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      2   15.4%        Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      2  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2  100.0%            Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2   15.4%        Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      2  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2  100.0%            Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1    7.7%        LazyCompile: ~setupFetch node:internal/process/pre_execution:213:20
+      1  100.0%          LazyCompile: ~prepareExecution node:internal/process/pre_execution:52:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1    7.7%        LazyCompile: ~initializeSourceMapsHandlers node:internal/process/pre_execution:581:38
+      1  100.0%          LazyCompile: ~prepareExecution node:internal/process/pre_execution:52:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1    7.7%        LazyCompile: ~get BlockList node:net:2235:16
+      1  100.0%          Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      1  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1    7.7%        Function: ~<anonymous> node:net:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      1    7.7%        Function: ~<anonymous> node:internal/readline/interface:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    7.7%        Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      5    1.8%      LazyCompile: ~internalCompileFunction node:internal/vm:31:33
+      5  100.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1154:18
+      5  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1210:37
+      5  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1265:37
+
+    128   26.7%  epoll_pwait@@GLIBC_2.6
+
+     18    3.8%  /usr/lib/x86_64-linux-gnu/libc.so.6
+
+     17    3.5%  __write@@GLIBC_2.2.5
+     10   58.8%    /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+      2   20.0%      /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+      1   50.0%        Function: ^getOwn node:internal/bootstrap/loaders:188:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:307:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:293:15
+      1   50.0%        Function: ^<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:542:29
+      1   10.0%      LazyCompile: ~spawn node:child_process:749:15
+      1  100.0%        LazyCompile: ~<anonymous> /usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:91065
+      1  100.0%          LazyCompile: ~<anonymous> /usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:90356
+      1  100.0%            LazyCompile: ~7207 /usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:89296
+      1   10.0%      LazyCompile: ~popAsyncContext node:internal/async_hooks:553:25
+      1  100.0%        LazyCompile: ~emitAfterScript node:internal/async_hooks:517:25
+      1  100.0%          LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1   10.0%      LazyCompile: ~patchProcessObject node:internal/process/pre_execution:127:28
+      1  100.0%        LazyCompile: ~prepareExecution node:internal/process/pre_execution:52:26
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   10.0%      LazyCompile: ~openSync node:fs:592:18
+      1  100.0%        LazyCompile: ~readFileSync node:fs:466:22
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1265:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1107:33
+      1   10.0%      LazyCompile: ~on node:internal/event_target:872:5
+      1  100.0%        LazyCompile: ~setupPortReferencing node:internal/worker/io:292:30
+      1  100.0%          LazyCompile: ~oninit node:internal/worker/io:230:16
+      1  100.0%            /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+      1   10.0%      LazyCompile: ~Socket._writeGeneric node:net:899:42
+      1  100.0%        LazyCompile: ~Socket._write node:net:941:35
+      1  100.0%          LazyCompile: ~writeOrBuffer node:internal/streams/writable:368:23
+      1  100.0%            LazyCompile: ~_write node:internal/streams/writable:286:16
+      1   10.0%      LazyCompile: ~<anonymous> node:internal/worker:212:31
+      1  100.0%        LazyCompile: ~<anonymous> node:internal/event_target:684:20
+      1  100.0%          LazyCompile: ~exports.emitMessage node:internal/per_context/messageport:19:31
+      1   10.0%      LazyCompile: ~<anonymous> /usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:96113
+      1  100.0%        /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+      1  100.0%          LazyCompile: ~checkAll /usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:96088
+      1  100.0%            LazyCompile: ~<anonymous> /usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:90356
+
+     13    2.7%  fwrite@@GLIBC_2.2.5
+     11   84.6%    /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+      2   18.2%      LazyCompile: ~realpathSync node:fs:2502:22
+      2  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:478:20
+      2  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:584:28
+      2  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:986:35
+      1    9.1%      LazyCompile: ~value node:internal/console/constructor:337:20
+      1  100.0%        LazyCompile: ~log node:internal/console/constructor:376:6
+      1  100.0%          /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+      1  100.0%            LazyCompile: ~main /home/rosner/Projects/code-challenges/Node/workerThreads/main.js:15:14
+      1    9.1%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:478:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:584:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:986:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:888:24
+      1    9.1%      LazyCompile: ~installConsoleExtensions node:internal/util/inspector:65:34
+      1  100.0%        /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+      1  100.0%          LazyCompile: ~inspectorWaitForDebugger node:inspector:192:34
+      1  100.0%            LazyCompile: ~<anonymous> /usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:91065
+      1    9.1%      LazyCompile: ~assertEncoding node:internal/fs/utils:155:24
+      1  100.0%        LazyCompile: ~getOptions node:internal/fs/utils:318:20
+      1  100.0%          LazyCompile: ~readFileSync node:fs:466:22
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1265:37
+      1    9.1%      LazyCompile: ~Socket node:net:338:16
+      1  100.0%        LazyCompile: ~WriteStream node:tty:84:21
+      1  100.0%          LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%            LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:146:19
+      1    9.1%      LazyCompile: ~ReadableWorkerStdio node:internal/worker/io:332:14
+      1  100.0%        LazyCompile: ~Worker node:internal/worker:125:14
+      1  100.0%          LazyCompile: ~<anonymous> /home/rosner/Projects/code-challenges/Node/workerThreads/main.js:4:24
+      1  100.0%            /home/rosner/.nvm/versions/node/v18.16.1/bin/node
+      1    9.1%      LazyCompile: ~Readable.push node:internal/streams/readable:233:35
+      1  100.0%        LazyCompile: ~<anonymous> node:internal/worker:331:13
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/worker:275:12
+      1  100.0%            LazyCompile: ~Worker.<computed>.onexit node:internal/worker:208:28
+      1    9.1%      LazyCompile: ~Module node:internal/modules/cjs/loader:225:16
+      1  100.0%        LazyCompile: ~Module._preloadModules node:internal/modules/cjs/loader:1414:34
+      1  100.0%          LazyCompile: ~loadPreloadModules node:internal/process/pre_execution:597:28
+      1  100.0%            LazyCompile: ~setupUserModules node:internal/process/pre_execution:113:26
+      1    9.1%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+

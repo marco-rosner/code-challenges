@@ -101,6 +101,9 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Sum Recursive
 - Sum Twice
 
+### Node
+- worker Threads with profilling
+
 ### NextJS Applications
 - App Routing Pattenrs
 - Shopping Cart (Server Actions)
