@@ -44,10 +44,10 @@ Callback hell (Callback Pyramid) -> Multiple nested callbacks. To avoid it use P
 
 Importance of closures in NodeJS - Maintaining state and encapsulation
 
-process - Global object taht provides information and control over the NodeJS process. E.g. process.env, process.argv  
+process - Global object that provides information and control over the NodeJS process. E.g. process.env, process.argv  
 
-fork - Particular case of spawn() that generates a new instance of a V8 engine, multiple workers run ona  single node base for multiple tasks
-spawn - Launches a new process with the available set of commands, single compy of the node module is active on the processor
+fork - Particular case of spawn() that generates a new instance of a V8 engine, multiple workers run on a single node base for multiple tasks
+spawn - Launches a new process with the available set of commands, single copy of the node module is active on the processor
 
 setTimeout - schedule a callback to run after a specified dealy
 setImmediate - schedule a callback to run at the end of the current event loop queue
