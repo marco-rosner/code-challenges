@@ -11,9 +11,11 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - System Designs (Bullet points, examples and pictures)
 - AWS (Services, descriptions and free tears)
 - Database
+- Data Structs
 - Javascript
 - Node
 - React
+- Security
 - SOLID
 - Tests
 
