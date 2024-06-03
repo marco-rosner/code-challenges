@@ -144,6 +144,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Caesar Cipher
 - Calculate Single Digit
 - Camelcase
+- Compare Versions
 - Counting Letters
 - Decent Number
 - Editor
