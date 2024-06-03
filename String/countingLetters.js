@@ -2,11 +2,11 @@ const countingLetters = (s) => {
     const lowercase = s.toLowerCase()
     const report = {}
 
-    for(let i=0; i<lowercase.length; i++) {
-        if(lowercase[i] == ' ') continue
+    for (let i = 0; i < lowercase.length; i++) {
+        if (lowercase[i] == ' ') continue
 
-        if(report[lowercase[i]]) {
-            report[lowercase[i]] =  report[lowercase[i]] + 1
+        if (report[lowercase[i]]) {
+            report[lowercase[i]] = report[lowercase[i]] + 1
         } else {
             report[lowercase[i]] = 1
         }
