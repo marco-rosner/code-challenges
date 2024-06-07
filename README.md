@@ -118,6 +118,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 
 - Audio Video
 - Automatic Slide
+- Calculator
 - Captcha Router
 - Code Challenge
 - Contexts
