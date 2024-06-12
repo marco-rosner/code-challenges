@@ -52,6 +52,7 @@ SQL Injection
 XSS - Cross-Site Scripting
 > Injects a malicious client-side script into the page  
 > Hash integrity on package-lock.json  
+> CSP - Content Security Policy - Defining which script origin could be executable.
 
 CSRF - Cross-Site Request Forgery
 > Hijacking the user session to perform actions on user's behavior  
