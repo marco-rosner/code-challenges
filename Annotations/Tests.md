@@ -87,7 +87,6 @@ describe("Booking", () => {
 
         cy.wait(5000)
 
-        // check manage view
         cy.get(`[data-cy="update-booking-${bookingId}"]`).should("exist")
         cy.get(`[data-cy="delete-booking-${bookingId}"]`).should("exist")
     })
