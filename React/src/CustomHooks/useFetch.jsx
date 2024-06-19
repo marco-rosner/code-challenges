@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 
 export const useFetch = (url) => {
-    const abortController = AbortController()
+    const abortController = new AbortController()
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
     const [data, setData] = useState(null)
