@@ -81,6 +81,7 @@ Feel free to use, learn, comment, criticize, or do whatever you want with all th
 - Command
 - Composite
 - Factory
+- Interpreter
 - Iterator
 - Observer
 - Prototype
